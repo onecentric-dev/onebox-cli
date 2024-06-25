@@ -22,7 +22,7 @@ OneBox CLI เป็น command-line tool ที่ออกแบบมาเ�
 
 ### ดาวน์โหลดไฟล์ OneBox
 ```bash
-sudo wget https://github.com/kla7016/onecentric-dev/releases/latest/download/onebox -O /usr/local/bin/onebox
+sudo wget https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox -O /usr/local/bin/onebox
 ```
 
 ### ให้สิทธิ์ในการรันไฟล์ OneBox
