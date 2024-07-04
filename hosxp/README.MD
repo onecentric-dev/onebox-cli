@@ -89,7 +89,7 @@ onebox.exe alert --set
 
 <img src="images/9_set_fill_alert.png" alt="set_fill_alert" width="500">
 
-[รายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่า Alert](../README.MD)
+[รายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่า Alert](https://github.com/onecentric-dev/onebox-cli?tab=readme-ov-file#%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99)
 
 ## 7. แก้ไขไฟล์ onebox-backup.bat
 
