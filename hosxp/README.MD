@@ -36,6 +36,8 @@ onebox.exe login-token
 ```
 ระบบจะถามหา token สำหรับใช้ login สามารถหาได้จากเว็บ [https://hosbox.id.th](https://hosbox.id.th/)
 
+<img src="images/4_login_token.png" alt="login_token" width="500"> <br>
+
 ### 5.2 login เข้าสู่เว็บ [https://hosbox.id.th](https://hosbox.id.th/) ด้วย ProviderID
 
 <img src="images/5_go_to_hosbox.png" alt="go_to_hosbox" width="500"> <br>
@@ -115,7 +117,7 @@ onebox.exe alert --set
 
 ### 7.3 ตั้งค่า Path เพื่อทดสอบ Upload File
 
-7.3.1 เลือกไฟล์ขนาดเล็กเพื่อทดสอบการ Upload โดยนำ Path File นำมาแทนที่บริเวณกรอบสีแดง (ในตัวอย่างคือไฟล์ชื่อ `test.txt`)
+7.3.1 เลือกไฟล์ขนาดเล็กเพื่อทดสอบการ Upload โดยนำ Path File นำมาแทนที่บริเวณกรอบสีแดง (ในตัวอย่างไฟล์ทดสอบคือ `test.txt`)
 
 <img src="images/10_edit_bat_3.png" alt="edit_bat_3" width="700">
 
