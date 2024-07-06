@@ -31,9 +31,12 @@ sudo chmod +x /usr/local/bin/onebox
 ```
 
 ### ตรวจสอบการติดตั้ง
+
+โดยพิมพ์คำสั่ง `onebox version` แล้วกดปุ่ม Enter
 ```bash
 onebox version
 ```
+ถ้าระบบแสดงเลข version ของโปรแกรม หมายถึงระบบทำงานเป็นปกติ การติดตั้งสำเร็จ
 
 ## การล็อกอิน
 

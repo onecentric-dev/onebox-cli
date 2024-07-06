@@ -26,6 +26,7 @@
 ```bash
 onebox.exe version
 ```
+ถ้าระบบแสดงเลข version ของโปรแกรม หมายถึงระบบทำงานเป็นปกติ
 
 <img src="images/3_type_version.png" alt="type_version" width="500">
 
