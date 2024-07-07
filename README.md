@@ -217,7 +217,16 @@ Your space not enough หมายถึงพื้นที่ storage บน 
   "start_time": "2024-06-24T08:35:14+07:00",
   "end_time": "2024-06-24T08:35:18+07:00",
   "duration": "4.001624584s",
-  "transaction_id": "4cb39305903ed94ca6b42d97cad6c547"
+  "transaction_id": "4cb39305903ed94ca6b42d97cad6c547",
+  "account_name": "ทดสอบ ระบบ",
+  "account_type": "Personal",
+  "account_id": "123456708256",
+  "total_storage": "500.00 GB",
+  "used_storage": "52.76 GB",
+  "remaining_storage": "447.24 GB",
+  "total_storage_byte": 536870912000,
+  "used_storage_byte": 56652495385,
+  "remaining_storage_byte": 480218416615
 }
 ```
 
@@ -234,7 +243,16 @@ Your space not enough หมายถึงพื้นที่ storage บน 
   "start_time": "2024-06-24T09:34:25+07:00",
   "end_time": "2024-06-24T09:34:26+07:00",
   "duration": "1.067305166s",
-  "transaction_id": ""
+  "transaction_id": "",
+  "account_name": "ทดสอบ ระบบ",
+  "account_type": "Personal",
+  "account_id": "123456708256",
+  "total_storage": "1.00 GB",
+  "used_storage": "1.93 MB",
+  "remaining_storage": "1022.07 MB",
+  "total_storage_byte": 1073741824,
+  "used_storage_byte": 2019837,
+  "remaining_storage_byte": 1071721987
 }
 ```
 
