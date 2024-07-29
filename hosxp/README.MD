@@ -142,7 +142,7 @@ onebox.exe alert --set
 
 <img src="images/12_edit_path_hosxp_2.png" alt="edit_path_hosxp_2" width="500">
 
-เมื่อไฟล์ `onebox-backup.bat` ถูกรัน ระบบจะไปเลือก Folder ให้ตรงกับวันปัจจุบัน และค้นหาไฟล์นามสกุล `.7z` ที่ถูกสร้างในวันนั้น 
+เมื่อไฟล์ `onebox-backup.bat` ถูกรัน ระบบจะไปเลือก Folder ให้ตรงกับวันปัจจุบัน และค้นหาไฟล์นามสกุล `.7z` หรือ `.zip` ที่ถูกสร้างในวันนั้น 
 และ Upload ขึ้นไปยัง OneBox ใน Folder ที่กำหนด
 
 ## 9. ตั้งค่า Windows task scheduler เพื่อรัน `onebox-backup.bat` แบบอัตโนมัติ

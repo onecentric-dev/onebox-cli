@@ -7,28 +7,45 @@
 OneBox CLI เป็น command-line tool ที่ออกแบบมาเพื่ออำนวนความสะดวกในการจัดการไฟล์ และการถ่ายโอนไฟล์ด้วย OneBox คู่มือนี้จะช่วยให้คุณดาวน์โหลด ติดตั้ง และใช้งาน OneBox CLI ได้อย่างมีประสิทธิภาพ
 
 ## สารบัญ
-- [ดาวน์โหลดและติดตั้ง OneBox](#ดาวน์โหลดและติดตั้ง-OneBox)
+- [การติดตั้ง OneBoxCLI บน Linux](#การติดตั้ง-oneboxcli-บน-linux-ubuntu-debian-centos-mac-os)
+- [การติดตั้ง OneBoxCLI บน windows](#การติดตั้ง-oneboxcli-บน-windows)
 - [การล็อกอิน](#การล็อกอิน)
 - [การเลือก Account](#การเลือก-account)
 - [อัปโหลดไฟล์](#อัปโหลดไฟล์)
     - [อัปโหลดไฟล์โดยใช้ชื่อไฟล์ต้นฉบับ](#อัปโหลดไฟล์โดยใช้ชื่อไฟล์ต้นฉบับ)
     - [อัปโหลดไฟล์โดยเปลี่ยนชื่อไฟล์ปลายทาง](#อัปโหลดไฟล์โดยเปลี่ยนชื่อไฟล์ปลายทาง)
     - [อัปโหลดไฟล์โดยเปลี่ยนชื่อไฟล์ปลายทางโดยใช้รูปแบบ {datetime}](#อัปโหลดไฟล์โดยเปลี่ยนชื่อไฟล์ปลายทางโดยใช้รูปแบบ-datetime)
+- [อัปโหลดโฟลเดอร์](#อัปโหลดโฟลเดอร์)
 - [เปิดใช้งานการเก็บ Log](#เปิดใช้งานการเก็บ-Log)
 - [การตั้งค่าการแจ้งเตือน](#การตั้งค่าการแจ้งเตือน)
 - [การใช้งาน Crontab กับ OneBox](#การใช้งาน-Crontab-กับ-OneBox)
 
-## ดาวน์โหลดและติดตั้ง OneBox
 
-### ดาวน์โหลดไฟล์ OneBox
+## การติดตั้ง OneBoxCLI บน Linux (ubuntu, debian, centos, mac os)
+
+### 1. ดาวน์โหลดไฟล์ OneBox
 ```bash
 sudo wget https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox -O /usr/local/bin/onebox
 ```
 
-### ให้สิทธิ์ในการรันไฟล์ OneBox
+### 2. ให้สิทธิ์ในการรันไฟล์ OneBox
 ```bash
 sudo chmod +x /usr/local/bin/onebox
 ```
+
+## การติดตั้ง OneBoxCLI บน windows
+
+### 1. download ไฟล์โปรแกรม onebox.exe 
+
+[คลิกเพื่อ download onebox.exe](https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox.exe)
+
+### 2. เปิดโฟลเดอร์ที่เก็บไฟล์ onebox.exe
+
+<img src="images/setup/1_go_to_directory.png" alt="go_to_directory" width="500">
+
+### 3. ที่แถบไดเรกทอรีด้านบน ลบ Path ออก พิมพ์ `cmd` แล้วกดปุ่ม enter
+
+<img src="images/setup/2_type_cmd.png" alt="type_cmd" width="500">
 
 ### ตรวจสอบการติดตั้ง
 
@@ -92,7 +109,7 @@ onebox select-account
 ## อัปโหลดไฟล์
 
 ### การใช้งานพารามิเตอร์
-- `-s` หรือ `--source` คือ path ในเครื่องที่ต้องการอัปโหลด
+- `-s` หรือ `--source` คือ path ไฟล์ในเครื่องที่ต้องการอัปโหลด
 - `-d` หรือ `--destination` คือ path ที่ต้องการเก็บไฟล์ใน OneBox
 
 ### อัปโหลดไฟล์โดยใช้ชื่อไฟล์ต้นฉบับ
@@ -122,6 +139,27 @@ onebox push -s /path/to/source/file.txt -d /path/to/destination/{datetime}_file.
 ```bash
 onebox push -s /path/to/source/file.txt -d /path/to/destination-{date}/{time}_file.txt -f
 ```
+
+## อัปโหลดโฟลเดอร์
+
+### การใช้งานพารามิเตอร์
+- `-s` หรือ `--source` คือ path folder ในเครื่องที่ต้องการอัปโหลด
+- `-d` หรือ `--destination` คือ path ที่ต้องการเก็บไฟล์ใน OneBox
+
+```bash
+onebox push-dir -s /path/to/source -d /path/to/destination
+```
+
+ตัวอย่างการใช้งาน
+
+<img src="images/upload/upload-folder.png" alt="upload-folder" width="500">
+
+### สามารถกำหนดชื่อ folder ที่ฝั่ง onebox ในรูปแบบ `{datetime}`, `{date}` หรือ `{time}` เหมือนกับการอัปโหลดไฟล์
+
+```bash
+onebox push-dir -s /path/to/source -d /path/to/destination-{datetime} -f
+```
+
 
 ## เปิดใช้งานการเก็บ Log
 สามารถเปิดการใช้งานการเก็บ Log โดยใช้พารามิเตอร์ต่อไปนี้:
