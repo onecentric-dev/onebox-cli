@@ -172,6 +172,24 @@ onebox.exe alert --set
 <img src="images/13_task_9.jpeg" alt="13_task_9" width="500"> <br>
 
 
+### คำสั่งอื่นๆ
+## วิธีตั้งค่าให้ลบไฟล์บน OneBox แบบอัตโนมัติกรณีพื้นที่จัดเก็บบน OneBox เต็ม
+
+ให้เพิ่มคำสั่ง `--auto-remove-files-in-folder` เข้าไปต่อท้ายในไฟล์ onebox-backup.bat
+
+```
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp --auto-remove-files-in-folder
+```
+
+เมื่อพื้นที่จัดเก็บไม่เพียงพอต่อการ Upload ระบบจะทำการลบไฟล์ที่เก่าที่สุดใน Folder ที่กำหนด ในตัวอย่างจะเป็น Folder ชื่อ HOSxP-Backup เพื่อให้การ Backup ทำได้ต่อเนื่อง
+
+## กรณี Folder ที่ใช้เก็บไฟล์ Backup บน HOSxP เป็น Folder เดียว ไม่ได้แยก Folder 1-31
+
+ให้แก้ไขไฟล์ onebox-backup.bat เปลี่ยน `--hosxp` เป็น `--hosxp-one-folder`
+
+```
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp-one-folder
+```
 
 
 
