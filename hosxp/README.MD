@@ -173,7 +173,7 @@ onebox.exe alert --set
 
 
 ## คำสั่งอื่นๆ
-### วิธีตั้งค่าให้ลบไฟล์บน OneBox แบบอัตโนมัติกรณีพื้นที่จัดเก็บบน OneBox เต็ม
+### 1. วิธีตั้งค่าให้ลบไฟล์บน OneBox แบบอัตโนมัติกรณีพื้นที่จัดเก็บบน OneBox เต็ม
 
 ให้เพิ่มคำสั่ง `--auto-remove-files-in-folder` เข้าไปต่อท้ายในไฟล์ onebox-backup.bat
 
@@ -183,7 +183,7 @@ onebox.exe alert --set
 
 เมื่อพื้นที่จัดเก็บไม่เพียงพอต่อการ Upload ระบบจะทำการลบไฟล์ที่เก่าที่สุดใน Folder ที่กำหนด ในตัวอย่างจะเป็น Folder ชื่อ HOSxP-Backup เพื่อให้การ Backup ทำได้ต่อเนื่อง
 
-### กรณี Folder ที่ใช้เก็บไฟล์ Backup บน HOSxP เป็น Folder เดียว ไม่ได้แยก Folder 1-31
+### 2. กรณี Folder ที่ใช้เก็บไฟล์ Backup บน HOSxP เป็น Folder เดียว ไม่ได้แยก Folder 1-31
 
 ให้แก้ไขไฟล์ onebox-backup.bat เปลี่ยน `--hosxp` เป็น `--hosxp-one-folder`
 
@@ -191,7 +191,7 @@ onebox.exe alert --set
 "C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp-one-folder
 ```
 
-### กรณีต้องการให้ระบบค้นหา File ย้อนหลัง 1 วัน เช่น วันที่รัน Script เป็นวันที่ 2 และต้องการให้ไปหาไฟล์ใน Folder วันที่ 1
+### 3. กรณีต้องการให้ระบบค้นหา File ย้อนหลัง 1 วัน เช่น วันที่รัน Script เป็นวันที่ 2 และต้องการให้ไปหาไฟล์ใน Folder วันที่ 1
 
 ให้แก้ไขไฟล์ onebox-backup.bat เปลี่ยน `--hosxp` เป็น `--hosxp-previous-day` 
 
@@ -200,7 +200,7 @@ onebox.exe alert --set
 "C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp-previous-day
 ```
 
-### กรณีต้องการให้ระบบค้นหา File ที่ถูกสร้างล่าสุดใน Folder
+### 4. กรณีต้องการให้ระบบค้นหา File ที่ถูกสร้างล่าสุดใน Folder
 
 ให้แก้ไขไฟล์ onebox-backup.bat เปลี่ยน `--hosxp` เป็น `--last-file` 
 
