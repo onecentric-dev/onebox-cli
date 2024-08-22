@@ -200,8 +200,12 @@ onebox.exe alert --set
 "C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp-previous-day
 ```
 
+### กรณีต้องการให้ระบบค้นหา File ที่ถูกสร้างล่าสุดใน Folder
 
+ให้แก้ไขไฟล์ onebox-backup.bat เปลี่ยน `--hosxp` เป็น `--last-file` 
 
-
+```
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --last-file
+```
 
 
