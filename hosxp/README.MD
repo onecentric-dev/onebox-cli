@@ -191,6 +191,14 @@ onebox.exe alert --set
 "C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp-one-folder
 ```
 
+### กรณีต้องการให้ระบบค้นหา File ย้อนหลัง 1 วัน เช่น วันที่รัน Script เป็นวันที่ 2 และต้องการให้ไปหาไฟล์ใน Folder วันที่ 1
+
+ให้แก้ไขไฟล์ onebox-backup.bat เปลี่ยน `--hosxp` เป็น `--hosxp-previous-day` 
+
+ระบบจะไปหาไฟล์ใน Folder ของวันที่ก่อนหน้า 1 วัน เช่นวันนี้วันที่ 31 ก็จะไปหา Folder ของวันที่ 30
+```
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp-previous-day
+```
 
 
 
