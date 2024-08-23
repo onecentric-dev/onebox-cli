@@ -208,4 +208,12 @@ onebox.exe alert --set
 "C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --last-file
 ```
 
+กรณีต้องหาค้นหาไฟล์ล่าสุด โดยกำหนดการค้นหาจากนามสกุลไฟล์
+
+ให้เพิ่ม `--extensions ".zip,.7z"` ตัวอย่างนี้ระบบจะค้นหาเฉพาะไฟล์ .zip และ .7z เท่านั้น
+
+```
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --last-file --extensions ".zip,.7z"
+```
+
 
