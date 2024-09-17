@@ -217,3 +217,15 @@ onebox.exe alert --set
 ```
 
 
+### 5. กรณีต้องการกำหนด Path ที่ใช้เก็บ Chunk ไฟล์ระหว่าง Upload
+
+ให้เพิ่ม `--chunk-dir "D:\OneBox\chunk-file"` สามารถเปลี่ยน path ที่ใช้จัดเก็บ chunk file ได้ตามต้องการ
+
+```
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "HOSxP-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp --chunk-dir "D:\OneBox\chunk-file"
+```
+
+กรณีไม่เปลี่ยน Chunk ไฟล์จะถูกจัดเก็บที่
+```
+C:\Users\<user>\AppData\Local\Temp
+```
