@@ -218,8 +218,8 @@ onebox push-dir -s /path/to/source -d /path/to/destination-{datetime} -f
 - ค่าที่รองรับ:
   - today
   - yesterday
-  - YYYY-MM-DD (อยู่ระหว่างพัฒนา)
-  - ช่วงเวลา: YYYY-MM-DD..YYYY-MM-DD (อยู่ระหว่างพัฒนา)
+  - YYYY-MM-DD เช่น 2024-05-23
+  - ช่วงเวลา: YYYY-MM-DD..YYYY-MM-DD เช่น 2024-05-01..2024-05-31
 ```
 "C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "Test-Backup" --date "today"
 ```
