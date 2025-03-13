@@ -20,11 +20,11 @@ sudo chmod +x /usr/local/bin/onebox
 
 ## 2. เปิดโฟลเดอร์ที่เก็บไฟล์ onebox.exe เดิม (สำหรับ Windows)
 
-<img src="images/1_folder_program.png" alt="folder_program" width="500">
+<img src="images/1_folder_program.png" alt="folder_program" width="700">
 
 ## 3. ลบไฟล์โปรแกรมเดิม แล้วแทนที่ด้วยโปรแกรมเวอร์ชั่นล่าสุด (สำหรับ Windows)
 
-<img src="images/2_move_prgram.png" alt="move_prgram" width="500">
+<img src="images/2_move_prgram.png" alt="move_prgram" width="700">
 
 ## 4.เปิด command prompt และตรวจสอบเวอร์ชั่นโปรแกรม
 
@@ -107,15 +107,15 @@ onebox alert --set
 <br>
 Notify ที่เพิ่มมาจะมี Email, Discord Webhook และ Telegram
 <br>
-<img src="images/6_alert_set.png" alt="alert_set" width="600">
+<img src="images/6_alert_set.png" alt="alert_set" width="800">
 <br><br>
 Email - กรอก Email ที่ต้องการส่งแจ้งเตือน Backup
 <br>
-<img src="images/6_alert_set_email.png" alt="alert_set_email" width="600">
+<img src="images/6_alert_set_email.png" alt="alert_set_email" width="900">
 <br><br>
 Discord Webhook
 
-<img src="images/6_alert_set_discord.png" alt="alert_set_discord" width="600">
+<img src="images/6_alert_set_discord.png" alt="alert_set_discord" width="900">
 
 #### การสร้างเซิร์ฟเวอร์และขอ Discord Webhook URL
 
