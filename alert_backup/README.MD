@@ -107,81 +107,81 @@ onebox alert --set
 <br>
 Notify ที่เพิ่มมาจะมี Email, Discord Webhook และ Telegram
 <br>
-<img src="images/6_alert_set.png" alt="alert_set" width="500">
+<img src="images/6_alert_set.png" alt="alert_set" width="600">
 <br><br>
 Email - กรอก Email ที่ต้องการส่งแจ้งเตือน Backup
 <br>
-<img src="images/6_alert_set_email.png" alt="alert_set_email" width="500">
+<img src="images/6_alert_set_email.png" alt="alert_set_email" width="600">
 <br><br>
 Discord Webhook
 
-<img src="images/6_alert_set_discord.png" alt="alert_set_discord" width="500">
+<img src="images/6_alert_set_discord.png" alt="alert_set_discord" width="600">
 
 #### การสร้างเซิร์ฟเวอร์และขอ Discord Webhook URL
 
 กดเครื่องหมาย `+` สำหรับสร้างกลุ่มสำหรับแจ้งเตือน
 
-<img src="images/alert/set-discord-1.png" alt="set-discord-1" width="500">
+<img src="images/alert/set-discord-1.png" alt="set-discord-1" width="600">
 
 กด `สร้างของฉัน`
 
-<img src="images/alert/set-discord-2.png" alt="set-discord-2" width="300">
+<img src="images/alert/set-discord-2.png" alt="set-discord-2" width="400">
 
 กด `สำหรับฉันและเพื่อนๆ`
 
-<img src="images/alert/set-discord-3.png" alt="set-discord-3" width="300">
+<img src="images/alert/set-discord-3.png" alt="set-discord-3" width="400">
 
 ตั้งชื่อเซิร์ฟเวอร์ แล้วกด `สร้าง` แล้วกด `แก้ไขช่อง`
 
-<img src="images/alert/set-discord-4.png" alt="set-discord-4" width="300">
+<img src="images/alert/set-discord-4.png" alt="set-discord-4" width="400">
 
 คลิกขวาช่องข้อความที่ต้องการแจ้งเตือน เช่น `#ทั่วไป` แล้วกด `แก้ไขช่อง`
 
-<img src="images/alert/set-discord-5.png" alt="set-discord-5" width="300">
+<img src="images/alert/set-discord-5.png" alt="set-discord-5" width="400">
 
-กด `ภาพรวม` และกด `สร้าง Webhook`
+กด `การรวม` และกด `สร้าง Webhook`
 
-<img src="images/alert/set-discord-6.png" alt="set-discord-6" width="500">
+<img src="images/alert/set-discord-6.png" alt="set-discord-6" width="600">
 
 กดที่ตัว bot เพิ่อแสดงรายละเอียด
 
-<img src="images/alert/set-discord-7.png" alt="set-discord-7" width="500">
+<img src="images/alert/set-discord-7.png" alt="set-discord-7" width="600">
 
 กด `คัดลอก URL เว็บฮุก` เพื่อนำไปใช้ตั้งค่าการแจ้งเตือน โดย Discord Webhook URL จะขึ้นต้นด้วย `https://discordapp.com/api/webhooks` หรือ `https://discord.com/api/webhooks`
 
-<img src="images/alert/set-discord-8.png" alt="set-discord-8" width="500">
+<img src="images/alert/set-discord-8.png" alt="set-discord-8" width="600">
 
 กรอก URL Discord Webhook ที่ต้องการส่งแจ้งเตือน Backup กด enter และตั้ง Alert ID เช่น discord01 แล้วกด enter
 
-<img src="images/6_alert_set_discord.png" alt="alert_set_discord" width="500">
+<img src="images/6_alert_set_discord.png" alt="alert_set_discord" width="600">
 
 <br><br><br>
 
 Telegram - กรอก Chat ID ที่ต้องการส่งแจ้งเตือน Backup
 
-<img src="images/alert/alert-set-telegram.png" alt="alert-set-telegram" width="500">
+<img src="images/alert/alert-set-telegram.png" alt="alert-set-telegram" width="650">
 
 #### การสร้างกลุ่มและขอ Chat ID
 
 เปิดโปรไฟล์แล้วกด `New Group` สำหรับสร้างกลุ่มสำหรับแจ้งเตือน
 
-<img src="images/alert/set-telegram-1.png" alt="set-telegram-1" width="300">
+<img src="images/alert/set-telegram-1.png" alt="set-telegram-1" width="400">
 
 ตั้งชื่อกลุ่มสำหรับการ backup แล้วกด `Next`
 
-<img src="images/alert/set-telegram-2.png" alt="set-telegram-2" width="300">
+<img src="images/alert/set-telegram-2.png" alt="set-telegram-2" width="400">
 
 เพิ่ม bot Hos Box Notify โดยพิมพ์ `@HosBox_notify_bot` กดที่ชื่อ bot แล้วกด `Create`
 
-<img src="images/alert/set-telegram-3.png" alt="set-telegram-3" width="300">
+<img src="images/alert/set-telegram-3.png" alt="set-telegram-3" width="400">
 
 เมื่อกลุ่มถูกสร้างให้พิมพ์ `/id` เพื่อแสดง Chat ID สำหรับนำไปใช้ตั้งค่าการแจ้งเตือน โดยจะขึ้นต้นด้วย - ตามด้วยตัวเลข เช่น `-1234567890`
 
-<img src="images/alert/set-telegram-4.png" alt="set-telegram-4" width="400">
+<img src="images/alert/set-telegram-4.png" alt="set-telegram-4" width="600">
 
 กรอก Chat ID ที่ต้องการส่งแจ้งเตือน Backup กด enter และตั้ง Alert ID เช่น telegram01 แล้วกด enter
 
-<img src="images/alert/alert-set-telegram.png" alt="alert-set-telegram" width="500">
+<img src="images/alert/alert-set-telegram.png" alt="alert-set-telegram" width="600">
 
 ### 6.4 พิมพ์คำสั่งสำหรับตรวจสอบการตั้งค่า Notify ทั้งหมดอีกครั้ง
 ```bash
