@@ -24,7 +24,7 @@
 ## 4. ระบบจะเปิด command prompt ในไดเรกทอรีที่เก็บไฟล์ onebox.exe ขึ้นมาให้ ให้ทดสอบโปรแกรมโดยการพิมพ์
 
 ```bash
-onebox.exe version
+onebox version
 ```
 ถ้าระบบแสดงเลข version ของโปรแกรม หมายถึงระบบทำงานเป็นปกติ
 
@@ -33,7 +33,7 @@ onebox.exe version
 ## 5. Login เข้าสู่ระบบ 
 ### 5.1 พิมพ์คำสั่ง login-token ลงในหน้าต่าง command prompt
 ```bash
-onebox.exe login-token
+onebox login-token
 ```
 ระบบจะถามหา token สำหรับใช้ login สามารถหาได้จากเว็บ [https://hosbox.id.th](https://hosbox.id.th/)
 
@@ -72,32 +72,47 @@ onebox.exe login-token
 แสดงข้อมูลองค์กร และแสดงข้อมูล Storage คงเหลือในระบบ onebox โดยใช้คำสั่ง
 
 ```bash
-onebox.exe account-info
+onebox account-info
 ```
 
 <img src="images/8_account_info.png" alt="account_info" width="500">
 
-## 6. ตั้งค่า Line Alert  (ขั้นตอนนี้สามารถทำในภายหลังได้)
+## 6. ตั้งค่า Alert  (ขั้นตอนนี้สามารถทำในภายหลังได้)
 
 พิมพ์คำสั่ง
 
 ```bash
-onebox.exe alert --set
+onebox alert --set
 ```
 
-เลือกที่ Line Notify แล้วกดปุ่ม enter
+เลือกที่ Notify ที่ต้องการแล้วกดปุ่ม enter
 
-<img src="images/9_set_alert.png" alt="set_alert" width="500">
+<img src="images/9_alert_set_new.png" alt="set_alert" width="500">
 
-กรอกข้อมูล Line Token และ ตั้งค่า Alert ID แล้วกดปุ่ม enter หากไม่พบช่องให้กรอก Line Token ให้กดปุ่ม enter อีกครั้ง
+กรอกข้อมูลและ ตั้งค่า Alert ID แล้วกดปุ่ม enter หากไม่พบช่องให้กรอกข้อมูลให้กดปุ่ม enter อีกครั้ง
 
 `Alert ID` คือ id สำหรับอ้างอิงถึง Setting Alert แต่ละอัน ใช้สำหรับอ้างอิงตอนส่ง Alert กรณีต้องการส่งแบบเฉพาะเจาะจง และใช้อ้างอิงสำหรับการลบ Alert
 
 การกำหนด `Alert ID` สามารถใช้ตัวหนังสือเหล่านี้ได้เท่านั้น 0-9, a-z, A-Z, - , _
 
-<img src="images/9_set_fill_alert.png" alt="set_fill_alert" width="500">
+Email - กรอก Email ที่ต้องการส่งแจ้งเตือน Backup
 
-[รายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่า Alert](https://github.com/onecentric-dev/onebox-cli?tab=readme-ov-file#%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99)
+<img src="images/9_alert_set_email.png" alt="set_fill_alert" width="500">
+<br><br>
+Discord Webhook - กรอก URL Discord Webhook ที่ต้องการส่งแจ้งเตือน Backup
+
+<img src="images/9_alert_set_discord.png" alt="set_fill_alert" width="500">
+
+สามารถตรวจสอบ URL Discord Webhook ผ่าน [คู่มือการตั้งค่าการแจ้งเตือนสำหรับ Discord Webhook](https://github.com/onecentric-dev/onebox-cli?tab=readme-ov-file#%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A-Discord-Webhook)
+
+<br>
+Telegram - กรอก Chat ID ที่ต้องการส่งแจ้งเตือน Backup
+
+<img src="images/9_alert_set_telegram.png" alt="set_fill_alert" width="500">
+
+สามารถตรวจสอบ Chat ID ผ่าน [คู่มือการตั้งค่าการแจ้งเตือนสำหรับ Telegram](https://github.com/onecentric-dev/onebox-cli?tab=readme-ov-file#%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A-Telegram)
+<br><br>
+[รายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่า Alert ทั้งหมด](https://github.com/onecentric-dev/onebox-cli?tab=readme-ov-file#%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99)
 
 ## 7. แก้ไขไฟล์ onebox-backup.bat
 

@@ -24,6 +24,8 @@ OneBox CLI เป็น command-line tool ที่ออกแบบมาเ�
   - [การกำหนด Path ที่ใช้เก็บ Chunk ไฟล์ระหว่าง Upload แบบทั้ง Folder](#การกำหนด-Path-ที่ใช้เก็บ-Chunk-ไฟล์ระหว่าง-Upload-แบบทั้ง-Folder)
 - [เปิดใช้งานการเก็บ Log](#เปิดใช้งานการเก็บ-Log)
 - [การตั้งค่าการแจ้งเตือน](#การตั้งค่าการแจ้งเตือน)
+    - [การตั้งค่าการแจ้งเตือนสำหรับ Discord Webhook](#การตั้งค่าการแจ้งเตือนสำหรับ-Discord-Webhook)
+    - [การตั้งค่าการแจ้งเตือนสำหรับ Telegram](#การตั้งค่าการแจ้งเตือนสำหรับ-Telegram)
 - [การใช้งาน Crontab กับ OneBox](#การใช้งาน-Crontab-กับ-OneBox)
 
 
@@ -270,15 +272,84 @@ onebox alert --set
 
 ตัวอย่างการตั้งค่า Alert
 
-<img src="images/alert/alert-select.png" alt="alert-select" width="500">
-
-การตั้งค่า Line Notify
-
-<img src="images/alert/alert-set-line.png" alt="alert-set-line" width="500">
+<img src="images/alert/alert-select-new.png" alt="alert-select" width="500">
 
 การตั้งค่า Webhook
 
-<img src="images/alert/alert-set-webhook.png" alt="alert-set-webhook" width="500">
+<img src="images/alert/alert-set-webhook-new.png" alt="alert-set-webhook" width="500">
+
+Email - กรอก Email ที่ต้องการส่งแจ้งเตือน Backup
+
+<img src="images/alert/alert-set-email.png" alt="alert-set-email" width="500">
+<br>
+
+### การตั้งค่าการแจ้งเตือนสำหรับ Discord Webhook
+
+Discord Webhook - กรอก URL Discord Webhook ที่ต้องการส่งแจ้งเตือน Backup
+
+<img src="images/alert/alert-set-discord.png" alt="alert-set-discord" width="500">
+
+#### การสร้างเซิร์ฟเวอร์และขอ Discord Webhook URL
+
+กดเครื่องหมาย `+` สำหรับสร้างกลุ่มสำหรับแจ้งเตือน
+
+<img src="images/alert/set-discord-1.png" alt="set-discord-1" width="500">
+
+กด `สร้างของฉัน`
+
+<img src="images/alert/set-discord-2.png" alt="set-discord-2" width="300">
+
+กด `สำหรับฉันและเพื่อนๆ`
+
+<img src="images/alert/set-discord-3.png" alt="set-discord-3" width="300">
+
+ตั้งชื่อเซิร์ฟเวอร์ แล้วกด `สร้าง` แล้วกด `แก้ไขช่อง`
+
+<img src="images/alert/set-discord-4.png" alt="set-discord-4" width="300">
+
+คลิกขวาช่องข้อความที่ต้องการแจ้งเตือน เช่น `#ทั่วไป` แล้วกด `แก้ไขช่อง`
+
+<img src="images/alert/set-discord-5.png" alt="set-discord-5" width="300">
+
+กด `ภาพรวม` และกด `สร้าง Webhook`
+
+<img src="images/alert/set-discord-6.png" alt="set-discord-6" width="500">
+
+กดที่ตัว bot เพิ่อแสดงรายละเอียด
+
+<img src="images/alert/set-discord-7.png" alt="set-discord-7" width="500">
+
+กด `คัดลอก URL เว็บฮุก` เพื่อนำไปใช้ตั้งค่าการแจ้งเตือน
+
+<img src="images/alert/set-discord-8.png" alt="set-discord-8" width="500">
+
+<br>
+
+### การตั้งค่าการแจ้งเตือนสำหรับ Telegram
+
+Telegram - กรอก Chat ID ที่ต้องการส่งแจ้งเตือน Backup
+
+<img src="images/alert/alert-set-telegram.png" alt="alert-set-telegram" width="500">
+
+#### การสร้างกลุ่มและขอ Chat ID
+
+เปิดโปรไฟล์แล้วกด `New Group` สำหรับสร้างกลุ่มสำหรับแจ้งเตือน
+
+<img src="images/alert/set-telegram-1.png" alt="set-telegram-1" width="300">
+
+ตั้งชื่อกลุ่มสำหรับการ backup แล้วกด `Next`
+
+<img src="images/alert/set-telegram-2.png" alt="set-telegram-2" width="300">
+
+เพิ่ม bot Hos Box Notify โดยพิมพ์ `@HosBox_notify_bot` กดที่ชื่อ bot แล้วกด `Create`
+
+<img src="images/alert/set-telegram-3.png" alt="set-telegram-3" width="300">
+
+เมื่อกลุ่มถูกสร้างให้พิมพ์ `/id` เพื่อแสดง Chat ID สำหรับนำไปใช้ตั้งค่าการแจ้งเตือน
+
+<img src="images/alert/set-telegram-4.png" alt="set-telegram-4" width="300">
+
+<br>
 
 สามารถดูการตั้งค่าแจ้งเตือนทั้งหมดโดยใช้คำสั่ง
 ```bash
@@ -299,18 +370,6 @@ onebox push -s /path/to/source/file.txt -d /path/to/destination --send-alerts
 ```bash
 onebox push -s /path/to/source/file.txt -d /path/to/destination --send-alerts --alert-id alertId01,alertId02
 ```
-
-### ตัวอย่าง Alert ที่ส่งผ่าน Line Notify
-
-กรณี Upload สำเร็จ
-
-<img src="images/alert/line-success.png" alt="line-success" width="500">
-
-กรณี Upload ไม่สำเร็จ
-
-Your space not enough หมายถึงพื้นที่ storage บน OneBox ไม่เพียงพอในการ Upload
-
-<img src="images/alert/line-failed.png" alt="line-failed" width="500">
 
 ### ตัวอย่าง Body Webhook
 
@@ -365,6 +424,36 @@ Your space not enough หมายถึงพื้นที่ storage บน 
   "remaining_storage_byte": 1071721987
 }
 ```
+
+### ตัวอย่าง Alert ที่ส่งผ่าน Email
+
+กรณี Upload สำเร็จ
+
+<img src="images/alert/email-success.png" alt="email-success" width="300">
+
+กรณี Upload ไม่สำเร็จ
+
+<img src="images/alert/email-failed.png" alt="email-failed" width="300">
+
+### ตัวอย่าง Alert ที่ส่งผ่าน Discord Webhook
+
+กรณี Upload สำเร็จ
+
+<img src="images/alert/discord-success.png" alt="discord-success" width="200">
+
+กรณี Upload ไม่สำเร็จ
+
+<img src="images/alert/discord-failed.png" alt="discord-failed" width="200">
+
+### ตัวอย่าง Alert ที่ส่งผ่าน Telegram
+
+กรณี Upload สำเร็จ
+
+<img src="images/alert/telegram-success.png" alt="telegram-success" width="300">
+
+กรณี Upload ไม่สำเร็จ
+
+<img src="images/alert/telegram-failed.png" alt="telegram-failed" width="300">
 
 ## การใช้งาน Crontab กับ OneBox
 
