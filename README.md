@@ -345,7 +345,11 @@ Telegram - กรอก Chat ID ที่ต้องการส่งแจ้
 
 <img src="images/alert/set-telegram-2.png" alt="set-telegram-2" width="400">
 
-เพิ่ม bot Hos Box Notify โดยพิมพ์ `@HosBox_notify_bot` กดที่ชื่อ bot แล้วกด `Create`
+เพิ่ม bot ตามการใช้งาน (เลือกอย่างใดอย่างหนึ่ง)
+1. OneBox Notify สำหรับผู้ใช้งาน OneBox โดยพิมพ์ `@OneBox_notify_bot` 
+2. HosBox Notify สำหรับผู้ใช้งาน HosBox (โรงพยาบาล) โดยพิมพ์ `@HosBox_notify_bot` 
+
+กดที่ชื่อ bot แล้วกด `Create`
 
 <img src="images/alert/set-telegram-3.png" alt="set-telegram-3" width="400">
 
