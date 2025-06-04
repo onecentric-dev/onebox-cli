@@ -1,14 +1,14 @@
-# การตั้งค่า Notify OneBox CLI (เวอร์ชั่น 1.2.2 ขึ้นไป)
+# การตั้งค่า OneBox CLI
 
 ## 1. ดาวน์โหลดไฟล์โปรแกรมเวอร์ชั่นล่าสุด
 
 ดาวน์โหลดไฟล์ OneBox สำหรับ Windows
 
-[คลิกเพื่อ download สำหรับ Windows](https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox.exe)
+[คลิกเพื่อ download สำหรับ Windows](https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox.exe)
 
 ดาวน์โหลดไฟล์ OneBox สำหรับ Linux
 ```bash
-sudo wget https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox -O /usr/local/bin/onebox
+sudo wget https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox -O /usr/local/bin/onebox
 ```
 
 ให้สิทธิ์ในการรันไฟล์ OneBox สำหรับ Linux
@@ -171,7 +171,7 @@ Telegram - กรอก Chat ID ที่ต้องการส่งแจ้
 
 <img src="images/alert/set-telegram-2.png" alt="set-telegram-2" width="400">
 
-เพิ่ม bot Hos Box Notify โดยพิมพ์ `@HosBox_notify_bot` กดที่ชื่อ bot แล้วกด `Create`
+เพิ่ม bot OneBox HosBox Notify โดยพิมพ์ `@HosBox_notify_bot` กดที่ชื่อ bot แล้วกด `Create`
 
 <img src="images/alert/set-telegram-3.png" alt="set-telegram-3" width="400">
 

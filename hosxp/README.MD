@@ -4,11 +4,11 @@
 
 ### onebox.exe ไฟล์โปรแกรม
 
-[คลิกเพื่อ download onebox.exe](https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox.exe)
+[คลิกเพื่อ download onebox.exe](https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox.exe)
 
 
 ### onebox-backup.bat สำหรับเรียกใช้ใน Windows Task Scheduler
-[คลิกเพื่อ download onebox-backup.bat](https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox-backup.bat)
+[คลิกเพื่อ download onebox-backup.bat](https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox-backup.bat)
 
 
 ## 2. เปิดโฟลเดอร์ที่เก็บไฟล์ onebox.exe
