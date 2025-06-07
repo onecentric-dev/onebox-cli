@@ -22,6 +22,8 @@ OneBox CLI เป็น command-line tool ที่ออกแบบมาเ�
   - [ระบุนามสกุลไฟล์ ที่ต้องการให้ระบบค้นหา](#ระบุนามสกุลไฟล์-ที่ต้องการให้ระบบค้นหา)
   - [ระบุวันที่ต้องการให้ระบบค้นหาไฟล์](#ระบุวันที่ต้องการให้ระบบค้นหาไฟล์)
   - [การกำหนด Path ที่ใช้เก็บ Chunk ไฟล์ระหว่าง Upload แบบทั้ง Folder](#การกำหนด-Path-ที่ใช้เก็บ-Chunk-ไฟล์ระหว่าง-Upload-แบบทั้ง-Folder)
+  - [วิธีตั้งค่าให้ลบไฟล์เก่าสุดบน OneBox แบบอัตโนมัติกรณีพื้นที่จัดเก็บบน OneBox เต็ม](#วิธีตั้งค่าให้ลบไฟล์เก่าสุดบน-OneBox-แบบอัตโนมัติกรณีพื้นที่จัดเก็บบน-OneBox-เต็ม)
+  - [วิธีตั้งค่าให้จำกัดจำนวนไฟล์ที่ชื่อซ้ำกัน](#วิธีตั้งค่าให้จำกัดจำนวนไฟล์ที่ชื่อซ้ำกัน)
 - [เปิดใช้งานการเก็บ Log](#เปิดใช้งานการเก็บ-Log)
 - [การตั้งค่าการแจ้งเตือน](#การตั้งค่าการแจ้งเตือน)
     - [การตั้งค่าการแจ้งเตือนสำหรับ Discord Webhook](#การตั้งค่าการแจ้งเตือนสำหรับ-Discord-Webhook)
@@ -31,10 +33,19 @@ OneBox CLI เป็น command-line tool ที่ออกแบบมาเ�
 
 ## การติดตั้ง OneBoxCLI บน Linux (ubuntu, debian, centos, mac os)
 
-### 1. ดาวน์โหลดไฟล์ OneBox
+### 1. ดาวน์โหลดไฟล์ OneBoxCLI (Linux)
+
+สำหรับผู้ใช้งานเว็บไซต์ [box.one.th](https://box.one.th/) (ผู้ใช้งานเทั่วไปและบริษัท)
 ```bash
 sudo wget https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox -O /usr/local/bin/onebox
 ```
+<br>
+
+สำหรับผู้ใช้งานเว็บไซต์ [hosbox.id.th](https://hosbox.id.th/) (โรงพยาบาล)
+```bash
+sudo wget https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox.exe -O /usr/local/bin/onebox
+```
+<br>
 
 ### 2. ให้สิทธิ์ในการรันไฟล์ OneBox
 ```bash
@@ -45,7 +56,15 @@ sudo chmod +x /usr/local/bin/onebox
 
 ### 1. download ไฟล์โปรแกรม onebox.exe 
 
-[คลิกเพื่อ download onebox.exe](https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox.exe)
+สำหรับผู้ใช้งานเว็บไซต์ [box.one.th](https://box.one.th/) (ผู้ใช้งานเทั่วไปและบริษัท)
+
+[คลิกเพื่อ download onebox.exe สำหรับผู้ใช้งานเทั่วไปและบริษัท](https://github.com/onecentric-dev/onebox-cli/releases/latest/download/onebox.exe)
+
+<br>
+
+สำหรับผู้ใช้งานเว็บไซต์ [hosbox.id.th](https://hosbox.id.th/) (โรงพยาบาล)
+
+[คลิกเพื่อ download onebox.exe สำหรับโรงพยาบาล](https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox.exe)
 
 ### 2. เปิดโฟลเดอร์ที่เก็บไฟล์ onebox.exe
 
@@ -153,7 +172,7 @@ onebox push -s /path/to/source/file.txt -d /path/to/destination-{date}/{time}_fi
 ให้เพิ่มคำสั่ง `--auto-remove-files-in-folder` เข้าไปต่อท้ายในไฟล์ onebox-backup.bat
 
 ```
-"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "Test-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp --auto-remove-files-in-folder
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "OneBox-Backup" --send-alerts --log --log-file "C:\OneBox\log" --hosxp --auto-remove-files-in-folder
 ```
 
 เมื่อพื้นที่จัดเก็บไม่เพียงพอต่อการ Upload ระบบจะทำการลบไฟล์ที่เก่าที่สุดใน Folder ที่กำหนด ในตัวอย่างจะเป็น Folder ชื่อ HOSxP-Backup เพื่อให้การ Backup ทำได้ต่อเนื่อง
@@ -163,7 +182,7 @@ onebox push -s /path/to/source/file.txt -d /path/to/destination-{date}/{time}_fi
 เติม `--last-file` เข้าไปในคำสั่ง
 
 ```
-"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "Test-Backup" --send-alerts --log --log-file "C:\OneBox\log" --last-file
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "OneBox-Backup" --send-alerts --log --log-file "C:\OneBox\log" --last-file
 ```
 
 กรณีต้องหาค้นหาไฟล์ล่าสุด โดยกำหนดการค้นหาจากนามสกุลไฟล์
@@ -171,7 +190,7 @@ onebox push -s /path/to/source/file.txt -d /path/to/destination-{date}/{time}_fi
 ให้เพิ่ม `--extensions ".zip,.7z"` ตัวอย่างนี้ระบบจะค้นหาเฉพาะไฟล์ .zip และ .7z เท่านั้น
 
 ```
-"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "Test-Backup" --send-alerts --log --log-file "C:\OneBox\log" --last-file --extensions ".zip,.7z"
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP" -d "OneBox-Backup" --send-alerts --log --log-file "C:\OneBox\log" --last-file --extensions ".zip,.7z"
 ```
 
 
@@ -180,7 +199,7 @@ onebox push -s /path/to/source/file.txt -d /path/to/destination-{date}/{time}_fi
 ให้เพิ่ม `--chunk-dir "D:\OneBox\chunk-file"` สามารถเปลี่ยน path ที่ใช้จัดเก็บ chunk file ได้ตามต้องการ
 
 ```
-"C:\OneBox\onebox.exe" push -s "D:\BACKUP\file.txt" -d "Test-Backup" --send-alerts --log --log-file "C:\OneBox\log" --chunk-dir "D:\OneBox\chunk-file"
+"C:\OneBox\onebox.exe" push -s "D:\BACKUP\file.txt" -d "OneBox-Backup" --send-alerts --log --log-file "C:\OneBox\log" --chunk-dir "D:\OneBox\chunk-file"
 ```
 
 กรณีไม่เปลี่ยน Chunk ไฟล์จะถูกจัดเก็บที่
@@ -212,7 +231,7 @@ onebox push-dir -s /path/to/source -d /path/to/destination-{datetime} -f
 ให้เพิ่ม `--extensions ".zip,.7z"` ตัวอย่างนี้ระบบจะค้นหาเฉพาะไฟล์ .zip และ .7z เท่านั้น
 
 ```
-"C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "Test-Backup" --extensions ".zip,.7z"
+"C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "OneBox-Backup" --extensions ".zip,.7z"
 ```
 
 ### ระบุวันที่ต้องการให้ระบบค้นหาไฟล์
@@ -223,7 +242,7 @@ onebox push-dir -s /path/to/source -d /path/to/destination-{datetime} -f
   - YYYY-MM-DD เช่น 2024-05-23
   - ช่วงเวลา: YYYY-MM-DD..YYYY-MM-DD เช่น 2024-05-01..2024-05-31
 ```
-"C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "Test-Backup" --date "today"
+"C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "OneBox-Backup" --date "today"
 ```
 
 
@@ -231,7 +250,23 @@ onebox push-dir -s /path/to/source -d /path/to/destination-{datetime} -f
 ให้เพิ่ม `--chunk-dir "D:\OneBox\chunk-file"` สามารถเปลี่ยน path ที่ใช้จัดเก็บ chunk file ได้ตามต้องการ
 
 ```
-"C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "Test-Backup" --send-alerts --log --log-file "C:\OneBox\log" --chunk-dir "D:\OneBox\chunk-file"
+"C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "OneBox-Backup" --send-alerts --log --log-file "C:\OneBox\log" --chunk-dir "D:\OneBox\chunk-file"
+```
+
+### วิธีตั้งค่าให้ลบไฟล์เก่าสุดบน-OneBox-แบบอัตโนมัติกรณีพื้นที่จัดเก็บบน-OneBox-เต็ม
+
+ให้เพิ่มคำสั่ง `--auto-remove-files-in-folder` เข้าไปต่อท้ายในไฟล์ onebox-backup.bat (ไม่สามารถใช้งานกับ --limit-copy ได้)
+
+```
+"C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "OneBox-Backup" --send-alerts --log --log-file "C:\OneBox\log" --auto-remove-files-in-folder
+```
+
+### วิธีตั้งค่าให้จำกัดจำนวนไฟล์ที่ชื่อซ้ำกัน
+
+ให้เพิ่มคำสั่ง `--limit-copy="5"` เข้าไปต่อท้ายในไฟล์ onebox-backup.bat โดยตัวเลขจะเป็นจำนวนที่จะจำกัดไฟล์ (ไม่สามารถใช้งานกับ --auto-remove-files-in-folder ได้)
+
+```
+"C:\OneBox\onebox.exe" push-dir -s "D:\BACKUP" -d "OneBox-Backup" --send-alerts --log --log-file "C:\OneBox\log" --limit-copy="5"
 ```
 
 
