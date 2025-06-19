@@ -43,7 +43,7 @@ sudo wget https://github.com/onecentric-dev/onebox-cli/releases/latest/download/
 
 สำหรับผู้ใช้งานเว็บไซต์ [hosbox.id.th](https://hosbox.id.th/) (โรงพยาบาล)
 ```bash
-sudo wget https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox.exe -O /usr/local/bin/onebox
+sudo wget https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox -O /usr/local/bin/onebox
 ```
 <br>
 
