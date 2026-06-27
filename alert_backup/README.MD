@@ -143,7 +143,7 @@ Discord Webhook
 
 <img src="images/alert/set-discord-6.png" alt="set-discord-6" width="600">
 
-กดที่ตัว bot เพิ่อแสดงรายละเอียด
+กดที่ตัวบอทเพิ่อแสดงรายละเอียด
 
 <img src="images/alert/set-discord-7.png" alt="set-discord-7" width="600">
 
@@ -171,7 +171,7 @@ Telegram - กรอก Chat ID ที่ต้องการส่งแจ้
 
 <img src="images/alert/set-telegram-2.png" alt="set-telegram-2" width="400">
 
-เพิ่ม bot OneBox HosBox Notify โดยพิมพ์ `@HosBox_notify_bot` กดที่ชื่อ bot แล้วกด `Create`
+เพิ่มบอท `OneBox HosBox Notify` โดยพิมพ์ `@HosBox_notify_bot` กดที่ชื่อบอท แล้วกด `Create`
 
 <img src="images/alert/set-telegram-3.png" alt="set-telegram-3" width="400">
 
