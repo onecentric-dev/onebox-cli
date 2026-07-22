@@ -43,7 +43,7 @@ sudo wget https://github.com/onecentric-dev/onebox-cli/releases/latest/download/
 
 สำหรับผู้ใช้งานเว็บไซต์ [hosbox.id.th](https://hosbox.id.th/) (โรงพยาบาล)
 ```bash
-sudo wget https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox -O /usr/local/bin/onebox
+sudo wget https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.4/onebox -O /usr/local/bin/onebox
 ```
 <br>
 
@@ -64,7 +64,7 @@ sudo chmod +x /usr/local/bin/onebox
 
 สำหรับผู้ใช้งานเว็บไซต์ [hosbox.id.th](https://hosbox.id.th/) (โรงพยาบาล)
 
-[คลิกเพื่อ download onebox.exe สำหรับโรงพยาบาล](https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox.exe)
+[คลิกเพื่อ download onebox.exe สำหรับโรงพยาบาล](https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.4/onebox.exe)
 
 ### 2. เปิดโฟลเดอร์ที่เก็บไฟล์ onebox.exe
 

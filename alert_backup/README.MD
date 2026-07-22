@@ -4,11 +4,11 @@
 
 ดาวน์โหลดไฟล์ OneBox สำหรับ Windows
 
-[คลิกเพื่อ download สำหรับ Windows](https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox.exe)
+[คลิกเพื่อ download สำหรับ Windows](https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.4/onebox.exe)
 
 ดาวน์โหลดไฟล์ OneBox สำหรับ Linux
 ```bash
-sudo wget https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.3/onebox -O /usr/local/bin/onebox
+sudo wget https://github.com/onecentric-dev/onebox-cli/releases/download/vHosBox1.2.4/onebox -O /usr/local/bin/onebox
 ```
 
 ให้สิทธิ์ในการรันไฟล์ OneBox สำหรับ Linux
